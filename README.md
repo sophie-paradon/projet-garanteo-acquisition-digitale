@@ -92,6 +92,17 @@ code : seule la colonne qu'on regarde change.
 | `9fa01fb1a0` | 269 € · première | 389 € · 7ᵉ |
 | `45c82b38c6` | 438 € | 583 € · dernière |
 
+Voici les deux mêmes écrans du dashboard, à un clic d'intervalle. Seul le segment
+**règle d'attribution**, en haut à gauche, a changé.
+
+![Page 2 du dashboard, segment sur premier contact](05_Restitution/captures/1_premier_contact.png)
+
+![Page 2 du dashboard, segment sur dernier contact](05_Restitution/captures/2_dernier_contact.png)
+
+`acb1a5969d` passe de la dernière à la première place, son coût par client tombe de 700 € à 175 €,
+et la carte orange n'a pas bougé : ni le budget, ni le nombre de clients n'ont changé. Seul le
+mérite qu'on leur attribue a changé de destinataire.
+
 Deux analystes travaillant sur les mêmes données peuvent donc recommander de couper des campagnes
 opposées, et tous les deux avoir raison. **La première recommandation n'est pas un nom de
 campagne, c'est d'acter une règle.**
@@ -168,6 +179,10 @@ Modèle en étoile de 13 tables, 8 relations, 49 mesures DAX et 22 colonnes calc
 Un segment **règle d'attribution** recalcule l'ensemble du rapport : c'est ce qui transforme le
 constat de la conclusion n° 3 en outil de décision.
 
+Au survol d'une campagne, une page d'infobulle affiche son détail complet :
+
+![Page d'infobulle affichée au survol d'une campagne](05_Restitution/captures/3_infobulle.png)
+
 ## Contenu du dépôt
 
 Ce dépôt contient les **trois livrables** du projet, ceux remis pour la soutenance.
@@ -177,6 +192,7 @@ Ce dépôt contient les **trois livrables** du projet, ceux remis pour la souten
 | `02_Notebooks/main.ipynb` | Le notebook complet : 263 cellules, du nettoyage aux tests statistiques, **avec toutes les sorties et les graphiques** |
 | `04_Dashboard/Garanteo_Sophie_Paradon.pbix` | Le rapport Power BI : 7 pages plus une infobulle, 13 tables, 49 mesures DAX |
 | `05_Restitution/Garanteo_Restitution.pptx` | La présentation : 26 slides de soutenance et 4 annexes |
+| [`05_Restitution/Garanteo_Restitution.pdf`](05_Restitution/Garanteo_Restitution.pdf) | **La même présentation en PDF, consultable directement ici**, sans rien installer |
 
 Les fichiers de données et les documents de travail intermédiaires ne sont pas publiés. Le
 notebook affichant l'intégralité de ses sorties, **chaque chiffre de cette page est vérifiable en
@@ -193,7 +209,10 @@ chiffre clé a bougé.
 le fichier : il s'affiche tel quel, sans source externe. Une seule précaution, ne pas cliquer sur
 *Actualiser* — le modèle chercherait alors les CSV d'origine, qui ne sont pas publiés ici.
 
-**La présentation** suit le fil : cadrage, préparation, analyse, restitution, recommandations. Les
+**La présentation** est disponible en deux formats. Le
+[PDF](05_Restitution/Garanteo_Restitution.pdf) s'affiche page par page dans GitHub, sans rien
+installer : c'est le plus simple pour la parcourir. Le `.pptx` est le fichier d'origine, à
+télécharger. Elle suit le fil cadrage, préparation, analyse, restitution, recommandations, et les
 quatre annexes répondent aux questions de détail.
 
 ## Outils
