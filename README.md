@@ -166,20 +166,62 @@ Cette section fait partie du livrable, elle n'est pas un aveu de faiblesse.
 Sept pages, une par question, plus une page d'infobulle affichée au survol d'une campagne.
 Modèle en étoile de 13 tables, 8 relations, 49 mesures DAX et 22 colonnes calculées.
 
-| Page | Contenu |
-|---|---|
-| 1 · Vue d'ensemble | L'entonnoir de conversion et les indicateurs de cadrage |
-| 2 · Coût d'acquisition | Le CAC par campagne, avec verdict et fiabilité calculés en DAX |
-| 3 · Règle d'attribution | Le même budget vu sous les trois règles |
-| 4 · Pitch | Les quatre tests statistiques et leur lecture |
-| 5 · Scénario budgétaire | La réallocation recalculée en direct |
-| 6 · Suivi mensuel | L'évolution sur l'année et les cumuls |
-| 7 · Qualité des données | Les anomalies et ce qu'elles faussaient |
-
 Un segment **règle d'attribution** recalcule l'ensemble du rapport : c'est ce qui transforme le
-constat de la conclusion n° 3 en outil de décision.
+constat de la conclusion n° 3 en outil de décision. Le rapport complet est aussi disponible en
+[PDF](04_Dashboard/Garanteo_Sophie_Paradon.pdf).
 
-Au survol d'une campagne, une page d'infobulle affiche son détail complet :
+### Page 1 · Vue d'ensemble
+
+L'entonnoir de 6 720 visiteurs à 180 clients, les cinq indicateurs de cadrage et le volume mensuel.
+C'est le point d'entrée de l'équipe acquisition.
+
+![Page 1 du dashboard : vue d'ensemble](04_Dashboard/pages/1-vue-densemble.png)
+
+### Page 2 · Coût d'acquisition par campagne
+
+Le CAC de chaque campagne, avec un verdict et un indice de fiabilité calculés en DAX. Le segment en
+haut à gauche bascule entre les trois règles d'attribution et recalcule tout.
+
+![Page 2 du dashboard : coût d'acquisition par campagne](04_Dashboard/pages/2-cout-acquisition.png)
+
+### Page 3 · La règle d'attribution change le classement
+
+Le même budget vu sous les trois règles, côte à côte, plus le rang moyen de chaque campagne. C'est
+la page qui fonde la première recommandation.
+
+![Page 3 du dashboard : règle d'attribution](04_Dashboard/pages/3-regle-attribution.png)
+
+### Page 4 · Le pitch téléphonique
+
+Les quatre tests statistiques, leurs p-values, et la lecture honnête de ce qu'ils permettent ou non
+de conclure. La jauge de joignabilité y révèle un levier plus important que le pitch lui-même.
+
+![Page 4 du dashboard : le pitch téléphonique](04_Dashboard/pages/4-pitch-telephonique.png)
+
+### Page 5 · Scénario de réallocation
+
+La réallocation recalculée en direct : 7 700 € redéployés, +9,5 clients, le CAC global qui passe de
+389 € à 369 €. Avec la réserve affichée à côté du résultat, pas en note de bas de page.
+
+![Page 5 du dashboard : scénario budgétaire](04_Dashboard/pages/5-scenario-budgetaire.png)
+
+### Page 6 · Suivi mensuel et coût du trafic
+
+L'évolution sur l'année avec les cumuls en Time Intelligence, et la démonstration que le prix du
+clic n'explique rien du coût du client.
+
+![Page 6 du dashboard : suivi mensuel](04_Dashboard/pages/6-suivi-mensuel.png)
+
+### Page 7 · Qualité des données
+
+Les indicateurs bruts contre les indicateurs corrigés, les corrections appliquées, celles qui ont
+été refusées, et ce que ces données ne permettent pas de dire.
+
+![Page 7 du dashboard : qualité des données](04_Dashboard/pages/7-qualite-donnees.png)
+
+### La page d'infobulle
+
+Au survol d'une campagne, dans n'importe quel visuel, une page masquée affiche son détail complet :
 
 ![Page d'infobulle affichée au survol d'une campagne](05_Restitution/captures/3_infobulle.png)
 
@@ -191,6 +233,7 @@ Ce dépôt contient les **trois livrables** du projet, ceux remis pour la souten
 |---|---|
 | `02_Notebooks/main.ipynb` | Le notebook complet : 263 cellules, du nettoyage aux tests statistiques, **avec toutes les sorties et les graphiques** |
 | `04_Dashboard/Garanteo_Sophie_Paradon.pbix` | Le rapport Power BI : 7 pages plus une infobulle, 13 tables, 49 mesures DAX |
+| [`04_Dashboard/Garanteo_Sophie_Paradon.pdf`](04_Dashboard/Garanteo_Sophie_Paradon.pdf) | **Le même rapport en PDF**, et ses 7 pages en images plus bas |
 | `05_Restitution/Garanteo_Restitution.pptx` | La présentation : 26 slides de soutenance et 4 annexes |
 | [`05_Restitution/Garanteo_Restitution.pdf`](05_Restitution/Garanteo_Restitution.pdf) | **La même présentation en PDF, consultable directement ici**, sans rien installer |
 

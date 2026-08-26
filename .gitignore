@@ -18,10 +18,12 @@
 02_Notebooks/*
 !02_Notebooks/main.ipynb
 
-# --- sauf le rapport Power BI ---
+# --- sauf le rapport Power BI, son PDF et les captures de ses 7 pages ---
 !04_Dashboard/
 04_Dashboard/*
 !04_Dashboard/Garanteo_Sophie_Paradon.pbix
+!04_Dashboard/Garanteo_Sophie_Paradon.pdf
+!04_Dashboard/pages/
 
 # --- sauf la presentation, son PDF et les 3 captures du dashboard ---
 !05_Restitution/
