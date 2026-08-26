@@ -1,0 +1,29 @@
+# =========================================================
+#  Projet Garanteo — depot volontairement limite aux livrables
+#
+#  Principe : TOUT est exclu par defaut, et on rouvre
+#  explicitement les 3 livrables + le README.
+#  Le reste du dossier de travail reste en local.
+# =========================================================
+
+# --- tout est exclu ---
+/*
+
+# --- sauf ces deux fichiers a la racine ---
+!.gitignore
+!README.md
+
+# --- sauf le notebook ---
+!02_Notebooks/
+02_Notebooks/*
+!02_Notebooks/main.ipynb
+
+# --- sauf le rapport Power BI ---
+!04_Dashboard/
+04_Dashboard/*
+!04_Dashboard/Garanteo_Sophie_Paradon.pbix
+
+# --- sauf la presentation ---
+!05_Restitution/
+05_Restitution/*
+!05_Restitution/Garanteo_Restitution.pptx
