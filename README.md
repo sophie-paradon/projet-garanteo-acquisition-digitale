@@ -92,16 +92,25 @@ code : seule la colonne qu'on regarde change.
 | `9fa01fb1a0` | 269 € · première | 389 € · 7ᵉ |
 | `45c82b38c6` | 438 € | 583 € · dernière |
 
-Voici les deux mêmes écrans du dashboard, à un clic d'intervalle. Seul le segment
+Voici le même écran du dashboard sous les trois règles, à un clic d'intervalle. Seul le segment
 **règle d'attribution**, en haut à gauche, a changé.
 
-![Page 2 du dashboard, segment sur premier contact](05_Restitution/captures/1_premier_contact.png)
+![Page 2 du dashboard, segment sur premier contact](05_Restitution/captures/02_Premier%20contact.png)
 
-![Page 2 du dashboard, segment sur dernier contact](05_Restitution/captures/2_dernier_contact.png)
+![Page 2 du dashboard, segment sur dernier contact](05_Restitution/captures/01_Dernier%20contact.png)
 
 `acb1a5969d` passe de la dernière à la première place, son coût par client tombe de 700 € à 175 €,
 et la carte orange n'a pas bougé : ni le budget, ni le nombre de clients n'ont changé. Seul le
-mérite qu'on leur attribue a changé de destinataire.
+mérite qu'on leur attribue a changé de destinataire. La couleur des barres suit le classement :
+la mise en forme conditionnelle est posée sur le coût lui-même, vert sous le coût global de
+389 €, orange jusqu'à 490 €, rouge au-delà.
+
+![Page 2 du dashboard, segment sur multi-touch](05_Restitution/captures/03_Multi%20touch.png)
+
+En multi-touch, **toutes les barres passent au vert**, parce que cette règle attribue 554 clients
+alors qu'il n'y en a que 180. Le même budget divisé par trois fois plus de clients donne
+évidemment un coût par client très bas. C'est pourquoi cette règle sert de contrôle et jamais de
+base de décision.
 
 Deux analystes travaillant sur les mêmes données peuvent donc recommander de couper des campagnes
 opposées, et tous les deux avoir raison. **La première recommandation n'est pas un nom de
@@ -164,7 +173,8 @@ Cette section fait partie du livrable, elle n'est pas un aveu de faiblesse.
 ## Le dashboard Power BI
 
 Sept pages, une par question, plus une page d'infobulle affichée au survol d'une campagne.
-Modèle en étoile de 13 tables, 8 relations, 49 mesures DAX et 22 colonnes calculées.
+Modèle en étoile de 13 tables, 8 relations, 49 mesures DAX, 18 colonnes calculées en DAX et 4
+ajoutées en Power Query.
 
 Un segment **règle d'attribution** recalcule l'ensemble du rapport : c'est ce qui transforme le
 constat de la conclusion n° 3 en outil de décision. Le rapport complet est aussi disponible en
@@ -222,8 +232,10 @@ Les indicateurs bruts contre les indicateurs corrigés, les corrections appliqu�
 ### La page d'infobulle
 
 Au survol d'une campagne, dans n'importe quel visuel, une page masquée affiche son détail complet :
-
-![Page d'infobulle affichée au survol d'une campagne](05_Restitution/captures/3_infobulle.png)
+son identifiant, son canal, sa taille, son budget, ses prospects, ses clients, son taux de
+conversion, son coût par client, son verdict et la fiabilité de l'estimation. C'est le principe du
+détail à la demande : la page principale reste lisible, et le détail n'apparaît que pour l'élément
+qu'on regarde.
 
 ## Contenu du dépôt
 
